@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&family=Ubuntu:wght@300&display=swap');
+
+body{
+   background-color: black;
+    
+}
+
+.title{
+    color: black;
+    font-size: 50px;
+    cursor:default;
+     font-family:Arial, Helvetica, sans-serif;
+    position: relative;
+    text-align: center;
+    top: 150px;
+    text-shadow: -1px -1px 0 	#D4AF37, 1px -1px 0 	#D4AF37, -1px 1px 0 	#D4AF37, 1px 1px 0 	#D4AF37;
+}
+
+
+.textButton{
+    position: relative;
+    height: 30px;
+    width: 30%;
+    left:35%;
+    top: 150px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: larger;
+    border-radius: 7px;
+}
+.textButton {
+    background-color: black;
+    color: 	#D4AF37;
+    border: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    border: 1px solid 	#D4AF37;
+  }
+  
+  .textButton:hover {
+    border: 2px solid	#D4AF37;
+    background-color: black;
+    transform: scale(1.1);
+  }
