@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&family=Ubuntu:wght@300&display=swap');
 
 body{
-   background-color: black;
-    
+background-image: url(../../images/backgroundLanding.jpg);
+background-size:cover;
 }
 
 .title{
     color: black;
     font-size: 50px;
     cursor:default;
-     font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     position: relative;
     text-align: center;
     top: 150px;
-    text-shadow: -1px -1px 0 	#D4AF37, 1px -1px 0 	#D4AF37, -1px 1px 0 	#D4AF37, 1px 1px 0 	#D4AF37;
+    text-shadow: -1px -1px 0 	#cab674, 1px -1px 0 	#cab674, -1px 1px 0 	#cab674, 1px 1px 0 	#cab674;
 }
 
 
@@ -29,15 +29,15 @@ body{
 }
 .textButton {
     background-color: black;
-    color: 	#D4AF37;
+    color: 	#cab674;
     border: 1px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
-    border: 1px solid 	#D4AF37;
+    border: 1px solid 	#cab674;
   }
   
   .textButton:hover {
-    border: 2px solid	#D4AF37;
+    border: 2px solid	#cab674;
     background-color: black;
     transform: scale(1.1);
   }

@@ -30,6 +30,10 @@ module.exports = (sequelize) => {
     steps: {
       type: DataTypes.ARRAY(DataTypes.JSONB),
       allowNull: false,
-    }
+    },
+    createdInDb: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: true,
+    },
   });
 };

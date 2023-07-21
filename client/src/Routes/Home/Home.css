@@ -1,0 +1,78 @@
+.imagen1{
+    position: absolute;
+    width: 550px;
+    height: 600px;
+    top:20%;
+    left: 50px;
+}
+.imagen2{
+    position: absolute;
+    width: 550px;
+    height: 600px;
+    top:20%;
+    left: 55%;
+}
+.imagen3{
+    position: absolute;
+    width: 650px;
+    height: 400px;
+    top:120%;
+    left:2%;
+}
+.history{
+    color: aliceblue;
+    position: absolute;
+    top:125%;
+    left:55%;
+    font-family:'Times New Roman', Times, serif;
+    background-color: #273746;
+    width: 540px;
+    height:100px;
+}
+.history2{
+    color: aliceblue;
+    position: absolute;
+    top:137%;
+    left:55%;
+    width:500px;
+    height:150px;
+    font-style: italic;
+    font-family:'Times New Roman', Times, serif;
+    font-display:inherit;
+    background-color: #273746;
+}
+.imagen4{
+    position: absolute;
+    width: 550px;
+    height: 700px;
+    top:184%;
+    left:2%;
+}
+.imagen5{
+    position: absolute;
+    width: 550px;
+    height: 700px;
+    top:184%;
+    left:56%;
+}
+.history3{
+    background-color: #273746;
+    color: aliceblue;
+    position: absolute;
+    top:230%;
+    left:27%;
+    font-style: italic;
+    font-family:'Times New Roman', Times, serif;
+    font-display:inherit;
+    font-size: larger;
+}
+.footer{
+    color: aliceblue;
+    position: absolute;
+    top: 350%;
+}
+.footer1{
+    color: rgb(58, 58, 58);
+    position: absolute;
+    top: 310%;
+}

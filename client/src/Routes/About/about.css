@@ -1,0 +1,44 @@
+.perfil{
+    position: absolute;
+    top: 23%;
+    left: 7%;
+    height: 460px;
+    width: 400px;
+    border-radius: 30px;
+}
+.title1{
+    position: absolute;
+    font-size: 20pt;
+    top: 23%;
+    left: 40%;
+    color:#fff;
+}
+.text1{
+    position: absolute;
+    font-size: 17pt;
+    top: 28%;
+    left: 37%;
+    color:#fff;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.logo1{
+    position: absolute;
+    top: 80%;;
+    height: 60px;
+    width: 60px;
+    left: 45%;
+}
+.logo2{
+    position: absolute;
+    top: 80%;
+    height: 60px;
+    width: 80px;
+    left: 55%;
+}
+.logo3{
+    position: absolute;
+    top: 80%;
+    height: 60px;
+    width: 60px;
+    left: 67%;
+}

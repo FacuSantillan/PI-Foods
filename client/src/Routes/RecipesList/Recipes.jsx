@@ -1,10 +1,19 @@
-import { NavLink, Link } from "react-router-dom"
+import { useSelector } from 'react-redux'
 
-const Recipes = () => {
+import Filters from '../../components/Filters/filters'
+
+import Cards from '../../components/Cards/cards'
+import './Recipes.css'
+
+export default function Recipes() {
+
+    const allRecipes = useSelector((state) => state.allRecipes);
+
     return(
-        <div>
-            <h1>recipes list</h1>
+        <div className='page'>
+            <Filters/> 
+            <Cards key={Cards} allRecipes= {allRecipes}/>
+            
         </div>
-    )
-}
-export default Recipes
+    );
+};

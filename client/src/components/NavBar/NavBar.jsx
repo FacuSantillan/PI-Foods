@@ -1,28 +1,32 @@
+import { Link } from "react-router-dom";
+
 import React from "react";
-import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 import logo from '../../images/logo.png'
+import SearchBar from "../SearchBar/SearchBar";
 
 const NavBar = () => {
   return (
     <div className="nav">
 
-      <div><img className="img" src={logo}/></div>
+      <SearchBar/>
+
+      <div><Link to='/home'><img className="img" alt="img" src={logo}/></Link></div>
 
       <button className='button'>
-        <NavLink className='text' to='/create'>Create Recipe</NavLink>
+        <Link className='text' to='/create'>Create Recipe</Link>
       </button>
 
       <button className='button1'>
-        <NavLink className='text' to='/home'>Home</NavLink>
+        <Link className='text' to='/home'>Home</Link>
       </button>
 
       <button className='button2'>
-        <NavLink className='text' to='/about'>About</NavLink>
+        <Link className='text' to='/about'>About</Link>
       </button>
       
       <button className='button3'>
-        <NavLink className='text' to='/recipes'>Recipes list</NavLink>
+        <Link className='text' to='/recipes'>Recipes list</Link>
       </button>
 
     </div>

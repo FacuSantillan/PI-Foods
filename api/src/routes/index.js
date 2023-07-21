@@ -1,17 +1,14 @@
 const { Router } = require('express');
-
-//importacion de rutas
-const { getRecipesById } = require('../controllers/getRecipesById')
-const { createRecipe } = require('../controllers/createRecipe')
-const { getRecipesByName } = require('../controllers/getRecipesByName')
-const { filterDiets } = require('./handler/recipeHandler')
+const recipesRouter = require("./recipesRouter")
+const dietsRouter = require("./dietsRouter")
 
 const router = Router();
 
+//ej: http://localhost:3000/recipe/...
+router.use('/recipes', recipesRouter);
 
-router.get('/recipes/:id', getRecipesById);
-router.post('/createrec', createRecipe);
-router.get('/recipes', getRecipesByName)
-router.get('/diets', filterDiets)
+//ej: http://localhost:3000/diets/...
+router.use('/diets', dietsRouter);
+
 
 module.exports = router;

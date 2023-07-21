@@ -1,0 +1,27 @@
+.submit{
+    position: absolute;
+    background-color: transparent;
+    right: 110px;
+    top: 48px;
+    border: none;
+}
+
+.search{
+    position: absolute;
+    height: 33px;
+    width: 33px;
+    top: 6px;
+    cursor: pointer;
+}
+
+.content{
+    position: absolute;
+    color: white;
+    background-color: transparent;
+    border-radius: 10px;
+    top: 56px;
+    left: 78%;
+    height: 25px;
+    border-color: white;
+    border: 1px solid;
+}

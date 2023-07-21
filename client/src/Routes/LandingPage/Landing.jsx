@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom"
-import style from './Landing.css'
+import './Landing.css'
 
 const Landing = () => {
     return(

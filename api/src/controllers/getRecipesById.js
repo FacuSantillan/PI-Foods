@@ -3,58 +3,58 @@ require('dotenv').config();
 const { API_KEY } = process.env;
 const { Recipe, Diets } = require('../db')
 
-const getRecipesById = async (req, res) => {
-   //primero busca el id en la DB
-   const { id } = req.params;
+const getRecipesById = async (id) => {
+   // Primero busca el ID en la base de datos
    if (id.includes('-')) {
     try {
+        // Busca la receta en la base de datos, incluyendo la asociación con los tipos de dietas
         const recipeDB = await Recipe.findOne({
-            where: {id: id},
-            include: { model: Diets},  
+            where: { id: id },
+            include: { model: Diets },
         });
-    //en caso que el id se encuentre en la base de datos retorna la info
+        // Retorna la información de la receta encontrada en la base de datos
         return recipeDB;
     } catch (error) {
+        // En caso de error al buscar en la base de datos, retorna un objeto con el mensaje de error
         return { error: error.message };
-    };
-    //en caso que no se haya encontrado la id en la base de datos, se la busca en la API
+    }
 } else {
-
     try {
-    const response = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY}&addRecipeInformation=true`);
-    
-    //mapeamos la data de la API para traernos solo la info que necesitamos
-    const recipe = response.data.results.map((data) => {
-        const {title, image, summary, healthScore, diets, id} = data;
-        return {
-            id,
+        // Si el ID no es de la base de datos, lo busca en la API externa usando Axios
+        const response = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY}&addRecipeInformation=true`);
+
+        // Extrae la información relevante de la respuesta de la API
+        const { title, summary, healthScore, image, analyzedInstructions, diets } = response.data;
+
+        // Crea un objeto con la información de la receta obtenida desde la API
+        const apiRecipe = {
+            id: response.data.id,
             title,
-            image,
             summary,
             healthScore,
-            //los paso a paso estan dentro de analyzedInstructions, este es el arreglo de objetos
-            steps: data.analyzedInstructions?.map((step) => 
-                step.steps.map((step) => {
-                    return {
-                        number: step.number,
-                        step: step.step,
-                    };
-                })
-            ),
+            image,
+            steps: analyzedInstructions[0]?.steps.map((step) => {
+                return {
+                    number: step.number,
+                    step: step.step,
+                };
+            }),
             diets: diets.map((diet) => {
                 return {
-                    name: diet
+                    name: diet,
                 };
             }),
         };
-    });
-    return res.status(200).json(recipe)
 
-} catch (error) {
-    res.status(500).json({ error: error.message });
-}}
+        // Retorna la información de la receta obtenida desde la API
+        return apiRecipe;
+    } catch (error) {
+        // En caso de error al consultar la API, retorna un objeto con el mensaje de error
+        return { error: error.message };
+    }
+}
 };
 
 module.exports = {
-    getRecipesById
+getRecipesById,
 };

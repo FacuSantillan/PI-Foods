@@ -1,0 +1,41 @@
+.frm {
+    position: absolute;
+    top: 20%;
+    left: 33%;
+	display: flex;
+	align-items: center;
+	width: 400px;
+	padding: 50px;
+	margin: auto;
+	color: rgb(0, 0, 0);
+    border-radius: 10px;
+	background-color: transparent;
+}
+
+.inpt {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	text-align: left;
+	width: 100%;
+	margin: 10px 0;
+	background-color: transparent;
+}
+
+.inpt textarea {
+	border-radius: var(--radius);
+	padding: 5px;
+	border: none;
+	resize: none;
+	overflow: auto;
+	background-color: transparent;
+	border: 2px solid;
+}
+
+.imagen{
+position: absolute;
+height: 110%;
+width: 40%;
+left: 28%;
+top: 20%;
+}

@@ -1,0 +1,38 @@
+.contain{
+    background-color: rgba(0, 0, 0, 0.67);
+    width: 39%;
+    height: 200%;
+    text-align: center;
+    position: inherit;
+    color: rgb(251, 251, 251);
+    left: 60%;
+    top: 18%;
+}
+.name{
+    position: inherit;
+    font-size: 25px;
+    font-style: oblique;
+    text-align:center;
+    left: -115%;
+	width: -100%;
+    height: 5%;
+}
+
+.recipeData{
+justify-content: center;
+}
+
+.image{
+    position: inherit;
+    height: 300px;
+    width: 340px;
+    top: 100px;
+    left: -120%;
+}
+.asd{
+    background-color: rgba(0, 0, 0, 0.694);
+    position: absolute;
+    width: 50%;
+    left: 22%;
+    top: 18%;
+}

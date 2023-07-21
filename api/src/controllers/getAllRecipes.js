@@ -1,7 +1,7 @@
 const getAllRecipesApi = require('./helpers/getAllFromApi');
 const getAllRecipesDB = require('./helpers/getAllFromDB');
 
-const getAllrecipes = async() => {
+const getAllRecipes = async() => {
    //se trae todas las recetas de la API
    const apiRecipe = await getAllRecipesApi();
    //se trae todas las recetaas de la base de datos
@@ -14,5 +14,5 @@ const getAllrecipes = async() => {
 }
 
 module.exports= { 
-    getAllrecipes
+    getAllRecipes
 };
