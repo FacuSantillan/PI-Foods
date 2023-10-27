@@ -1,7 +1,6 @@
 import axios from 'axios';
-const URL='http://localhost:3001'
 
-//---------------------exprotaciones de los types--------------------------------//
+//---------------------exportaciones de los types--------------------------------//
 
 export const GET_RECIPES = "GET_RECIPES";
 export const GET_RECIPES_NAME = "GET_RECIPES_NAME";
@@ -19,7 +18,7 @@ export const ORDER_BY_HEALTHSCORE = "ORDER_BY_HEALTHSCORE"
 
 export function getRecipes() {
     return async function (dispatch){
-        const response = await axios(`${URL}/recipes`);
+        const response = await axios(`/recipes`);
         
      return dispatch({
             type:'GET_RECIPES',
@@ -33,7 +32,7 @@ export function getRecipes() {
 export function getRecipeName (name) {
     return async function (dispatch) {
       try {
-        const response = await axios.get(`${URL}/recipes?name=${name}`);
+        const response = await axios.get(`/recipes?name=${name}`);
        
         return dispatch({
           type: 'GET_RECIPES_NAME',
@@ -48,7 +47,7 @@ export function getRecipeName (name) {
 
 export function getRecipeId (id) {
     return async function (dispatch) {
-        const response = await axios(`${URL}/recipes/${id}`);
+        const response = await axios(`/recipes/${id}`);
 
         return dispatch({
             type: 'GET_RECIPES_ID',
@@ -60,7 +59,7 @@ export function getRecipeId (id) {
 //---------------------------crear receta------------------------------------//
 export const addRecipe = (form) => {
     return async (dispatch) => {
-        const response = await axios.post(`${URL}/recipes`, form);
+        const response = await axios.post(`/recipes`, form);
         return dispatch({
             type: 'ADD_RECIPE',
             payload: response.data,
@@ -72,7 +71,7 @@ export const addRecipe = (form) => {
 
 export const getDiets = () => {
 	return async (dispatch) => {
-		const response = await axios.get(`${URL}/diets`);
+		const response = await axios.get(`/diets`);
 		return dispatch({
 			type: 'GET_DIETS',
 			payload: response.data,
