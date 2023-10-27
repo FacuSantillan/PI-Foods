@@ -9,6 +9,8 @@ import Detail from './Routes/Detail/detail';
 import Create from './Routes/CreateRecipe/create';
 import Recipes from './Routes/RecipesList/Recipes';
 
+axios.defaults.baseURL = 'https://proyecto-individual-foods-production.up.railway.app/'
+
 function App() {
   const allDiets = [...new Set()]
 
