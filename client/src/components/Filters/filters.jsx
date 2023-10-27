@@ -1,4 +1,4 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { filterByDiet, filterByOrigin, orderByHealthScore, orderByName } from '../../Redux/action';
 
 import './filtro.css'
